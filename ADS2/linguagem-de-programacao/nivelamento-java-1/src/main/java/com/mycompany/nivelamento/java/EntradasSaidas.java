@@ -14,7 +14,7 @@ public class EntradasSaidas {
                         +" onde moram "+populacao+" pessoas";
         
         System.out.println(frase1);
-        
+                
         String frase2 = String.format(
                 // %s = textos | %d = números inteiros
                 "Você mora em %s onde moram %d pessoas",

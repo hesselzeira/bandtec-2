@@ -1,10 +1,10 @@
-
 package com.mycompany.nivelamento.java;
 
 import java.util.Scanner;
 
 public class Exercicio1 {
     public static void main(String[] args) {
+        //apertar ctrl+space para importar biblioteca
         Scanner leitor = new Scanner(System.in);
         
         System.out.println("Qual é seu nome?");
