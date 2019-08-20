@@ -1,0 +1,16 @@
+Ubuntu 64 bits
+Coloca 2g 2048mb
+Criar um novo disco rigido virtual
+VDI
+Dinamicamente Alocado
+10G de HD para instalar
+
+----Criar----
+
+Instalar Linux
+Não ticar nada de atualização
+
+(ext4 - tipos de arquivos que o Linux Ubuntu vai usar)
+
+Usuário: aluno
+senha: bandtec
