@@ -1,0 +1,51 @@
+Ubuntu 64 bits
+Coloca 2g 2048mb
+Criar um novo disco rigido virtual
+VDI
+Dinamicamente Alocado
+10G de HD para instalar
+
+----Criar----
+
+Instalar Linux
+Não ticar nada de atualização
+
+(ext4 - tipos de arquivos que o Linux Ubuntu vai usar)
+
+Usuário: aluno
+senha: bandtec
+
+Diferenças das Primeiras, segundas e terceiras gerações das computação
+
+A internet é considerado um sistema distribuido
+
+web e suas 4 coisas que se compunham - 
+1. linguagem html 2. navegador web 3.Servidor web 4. Protocolo http
+
+Word Wild Web (WWW)
+
+COMANDOS E COISAS NO LINUXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+pasta pessoal: /home/aluno
+
+CTRL + ALT + F1    TELA DE TERMINAL 
+cTRL + ALT + F7    VOLTA AO NORMAL CARAI 
+
+PROMPT DE COMANDO - aluno@aluno-VirtualBox:~$ _
+
+QUANDO O $ SIGNIFICA QUE NÃO ESTÁ NO USUÁRIO ROOT
+QUANDO O # USUÁRIO ROOOOOTOTTOTOOTT
+
+pwd - print word direct - mostrar o que aparece, os diretório tdo
+SUDO - super usuario do (faça como super usuário)
+sudo passwd root - mudar a senha do root
+clear - limpar
+root - entrar no root com a senha 
+logout ou exit - para encerrar a sessão
+sudo su - para virar root 
+ls - mostra o conteudo da pasta
+ls -a - Mostra pastas ocultas
+ls -l - mostra o conteúdo detalhado 
+history - histórico dos ultimos comandos executavéis 
+cd / - change directory
+sudo shutdown -h now (-h = halt) tem que colocar now para desligar agoraaaaaaaaaaaaaaaaa
