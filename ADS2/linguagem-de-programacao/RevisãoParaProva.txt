@@ -1,0 +1,17 @@
+Crie uma classe Java que:
+
+a) Seja executável
+b) Solicite um valor inteiro ao usuário
+c) Faça 200 sorteio de números ao usuário (1 a 100)
+d) ao final, exibir:
+	
+	* Se o número do usuário informado em b) foi sorteado e em qual sorteio
+	* Quantos números pares foram sorteados
+	* Quantos números ímpares foram sorteados
+
+#FicaDica: Para saber se um número é par, verifique se o resto da divisãi dele
+é por 2 é 0. Faça como no JavaScript.
+
+Ex: if(meuNumero%2==0) {
+	// Cai aqui se for par
+	}
