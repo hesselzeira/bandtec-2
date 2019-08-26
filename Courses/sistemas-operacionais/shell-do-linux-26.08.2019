@@ -1,0 +1,24 @@
+Shell do linux 
+
+reboot (reiniciar)
+
+##### Estrutura de diretórios
+
+O que que é guardado nessas pastas?
+
+	/ (pasta raíz)
+	bin -
+	boot - fica arquivos relacionados a inicialização e kerne
+	dev - device (dispositvo)
+	etc - arquivos de configuração de sistemas
+	home - pastas pessoais dos usuários 
+	lib - biblioteca 
+	lib64 - 
+	mnt - mount(montar) 
+	proc - processos - arquivos relacionados ao processos do sistemas
+	root - pasta pessoal do usuário root
+	usr - pasta QUE ENGANA - Unix Shared Resources (coisas compartilhadas de maneira geral)
+	var - variável - caixa de email/histórico do usuário (os log)
+	
+
+
