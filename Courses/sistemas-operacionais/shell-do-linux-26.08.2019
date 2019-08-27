@@ -22,3 +22,13 @@ O que que é guardado nessas pastas?
 	
 
 
+
+Caminho absoluto: cd/home/aluno/imagem (sempre começando lá da /) (independente de onde estiver)
+Caminho RELATIVO: cd .. imagem (ele só funciona se eu estiver dentro de /aluno) 
+
+toda vez que quero subir de nível é .com
+
+
+comando tree
+
+sudo apt install tree
