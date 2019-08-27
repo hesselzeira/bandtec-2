@@ -1,0 +1,255 @@
+Lista 1 - Nivelamento Java
+
+1. Crie uma nova classe (Class) no projeto e:
+
+a) Ela deve ser executável 
+
+b) Solicite o nome e duas notas ao usuário. As notas são números reais.
+
+c) Calcule a média entre as notas (Dica: é da mesma forma como se faz em JavaScript)
+
+d) Exiba uma frase como esta:
+"Olá, NOME. Sua média foi de MEDIA"
+
+e) Use Interpolação com 1 casa decimal para a média
+
+
+
+
+
+2. Crie uma nova classe (Class) em um projeto Java e:
+
+a) Ela deve ser executável 
+
+b) Solicite a quantidade de pessoas que entraram num elevador (valor inteiro) e o peso total no elevador após todas entrarem (valor real).
+
+c) Calcule o peso médio de cada pessoa (Dica: é da mesma forma como se faz em JavaScript)
+
+d) Exiba uma frase como esta:
+"Entraram P pessoas no elevador. Agora ele tem T kg. O peso médio de cada pessoa é M"
+
+e) Use Interpolação com 2 casas decimais para o peso total no elevador e para a média
+
+
+
+
+
+3. Crie uma classe Java que:
+
+a) Seja executável
+
+b) Solicite o valor unitário de um produto e a quantidade vendida
+
+c) Solicite o valor pago pelo cliente
+
+d) Calcule e exiba o troco com a seguinte frase 
+"Seu troco será de R$X"
+Use interpolação com 2 casas decimais
+
+
+
+4. Crie uma classe Java que:
+
+a) Seja executável
+
+b) Solicite o login do cliente
+
+c) Solicite a senha do cliente
+
+d) Solicite a quantidade de vezes que o usuário aceita errar a senha antes do bloqueio
+
+e) Exiba uma frase como esta:
+
+"Seu login é L e sua senha é S. Você tem T tentativas antes de ser bloqueado"
+
+Use interpolação
+
+
+
+5. No país Quisito existe um benefício social chamado "Bolsa Filhos". Crie uma classe Java que:
+
+a) Solicite ao usuário quantos filhos de 0 a 3 anos possui. 
+
+a) Solicite ao usuário quantos filhos de 4 a 16 anos possui.
+
+c) Solicite ao usuário quantos filhos de 17 a 18 anos possui.
+
+d) Calcule o valor da Bolsa, sendo que o governo paga:
+
+    * R$25,12 por filhos com menos de 4 anos
+    * R$15,88 por filhos entre 4 e 16 anos
+    * R$12,44 por filhos entre 17 e 18 anos
+
+e) Exiba uma frase como esta:
+"Você tem um total de T filhos e vai receber R$B de bolsa"
+
+Use interpolação com 2 casas decimais para o valor da bolsa
+
+
+
+6. Crie uma classe Java que ajude a Maria Fobada a saber quanto será seu salário líquido.
+
+a) A classe deve ser executável
+
+b) O programa solicita o salário bruto
+
+c) O programa calcula o desconto do INSS, que é sempre de 10% sobre o bruto
+
+d) O programa calcula o desconto de IR, que é sempre de 20% sobre o bruto
+
+e) O programa pergunta quanto custa a condução diária só de ida da casa para o trabalho. O desconto de VT é sempre o que o usuário gasta. Assim, calcula-se assim: Valor de condução ida x 2 x 22.
+
+f) Calcule o salário líquido, que é o bruto menos os descontos de INSS, IR e VT
+
+g) Exibam, usando interpolação e com os valores numéricos com 2 casas decimais, uma frase como esta:
+
+"Seu bruto é R$A, tem um total de R$B em descontos e receberá um líquido de R$C"
+
+
+
+7. Jorge Abe Estado começou a se exercitar e deseja saber quantas calorias vai perder nos exercícios. Crie uma classe Java que:
+
+a) Seja executável
+
+b) Solicite ao usuário o tempo, em minutos (valor inteiro) que ele passou se aquecendo
+
+c) Solicite ao usuário o tempo em minutos (valor inteiro) que ele fez exercícios aeróbicos (correr, andar, pedalar etc)
+
+d) Solicite ao usuário o tempo em minutos (valor inteiro) que ele fez exercícios de musculação
+
+e) Calcule quantas calorias o Jorge perdeu, sendo que:
+
+  * cada minuto de aquecimento faz perder 12 calorias
+  * cada minuto de ex aeróbico faz perder 20 calorias
+  * cada minuto de musculação faz perder 25 calorias
+
+f) Exiba, usando interpolação e apenas valores numéricos inteiros, uma frase como esta:
+
+"Olá, Jorge. Você fez um total de X minutos de exercícios e perdeu cerca de Y calorias".
+
+
+
+
+
+8. Crie uma classe Java que:
+
+a) Seja executável
+
+b) Solicite o valor unitário de um produto e a quantidade vendida
+
+c) Solicite o valor pago pelo cliente
+
+d) Calcule SE há troco. Em havendo, e exiba o troco com a seguinte frase 
+"Seu troco será de R$X". Use interpolação com 2 casas decimais
+
+e) Caso não exista troco, exiba: "Sem troco".
+
+f) Caso o valor pago pelo cliente for insuficiente, exiba "Precisa de mais dinheiro!"
+
+
+
+
+
+9. No país Quisito existe um benefício social chamado "Bolsa Filhos". Crie uma classe Java que:
+
+a) Solicite ao usuário quantos filhos de 0 a 3 anos possui.
+
+b) Solicite ao usuário quantos filhos de 4 a 16 anos possui.
+
+c) Solicite ao usuário quantos filhos de 17 a 18 anos possui.
+
+d) Calcule o valor da Bolsa, sendo que o governo paga:
+
+    * R$25,12 por filhos com menos de 4 anos
+    * R$15,88 por filhos entre 4 e 16 anos
+    * R$12,44 por filhos entre 17 e 18 anos
+    * Caso o total de filhos for maior que 5, o governo paga um adicional de 20% da bolsa para a família
+
+e) Exiba uma frase como esta:
+"Você tem um total de T filhos e vai receber R$B de bolsa"
+
+Use interpolação com 2 casas decimais para o valor da bolsa
+
+
+
+
+
+10. Na faculdade Mente, existe o seguinte critério para aprovação dos alunos: A média tem que ser maior que 7,0 e a frequencia maior que 75%. Para implementar essa regra, crie uma classe Java que:
+
+a) Seja executável
+
+b) Solicite ao usuário a média do aluno e sua frequência
+
+c) Exiba "Parabéns, aprovado!" ou "Infelizmente, reprovado :(". 
+OBS: Use operador ternário!
+
+
+
+
+
+11. Exiba todos os números pares de 0 a 40 usando while
+
+
+
+12. Usando for, exiba todos os números ímpares entre 0 e 90
+
+
+
+13. Usando for, começe exibindo o valor 0.15 e depois 0.30, depois 0.45, depois 0.60... ou seja, aumente de 0.15 em 0.15 a cada iteração até que o último número seja menor que 5.
+
+Use interpolação p/ exibir o número com 2 casas decimais.
+
+
+
+14. Quando compramos um carro "parcelado", pagamos muito mais que o valor do carro. Você faz ideia de quanto?
+
+Imagine que um carro de R$40.000 comprado em 60x com uma taxa de juros de 1,40% ao mês
+        
+Usando for, começe exibindo 40.000 / 60, que é a 1ª parcela depois, a cada parcela, aumente o valor em 1,40% exibindo as 60 parcelas. Exiba sempre com 2 casas decimais.
+        
+Ao final das 60 parcelas, exiba quanto foi o valor total pago pelo carro.
+
+Ex: 
+        1ª Parcela: 666,67
+        2ª Parcela: 676,00
+        3ª Parcela: 685,46
+        60ª Parcela: ?
+        Total: ?        
+
+
+
+15. Crie um sorteio cujo resultado exibido p/ o usuário seja os valores de um dadinho (1 a 6)
+
+
+
+16. Crie uma classe Java executável que:
+
+a) Tenha uma variável inteira entre 1 e 100 com qualquer valor atribuído direto no código
+         
+b) Faça quantos sorteios forem necessários  até que o sorteador sorteie o mesmo número da variável do início deste enunciado, em a)
+        
+c) SE a quantidade de vezes necessárias para o "bingo" for:
+     * Até 3: exiba "Você é MUITO sortudo"
+     * Entre 4 e 10: exiba "Você é sortudo"
+     * Mais de 10: exiba "É melhor você ser trabalhador"
+        
+d) Ao final, exiba a quantidade de sorteios realizados
+
+
+
+
+
+17. Crie uma classe Java que:
+a) seja executável
+b) solicite um valor inteiro ao usuário (1 a 100)
+c) faça 200 sorteios de números inteiros (1 a 100)
+d) ao final, exibir:
+   * Se o número do usuário informado em b) foi sorteado pela 1ª vez e em qual sorteio
+   * Quantos números pares foram sorteados
+   * Quantos números ímpares foram sorteados
+   
+#FicaDica: Para saber se um número é par, verifique se o resto da divisão dele por 2 é 0. Faça como no Javascript.
+Ex: 
+if (meuNumero%2==0) {
+   // Cai aqui se for par
+}   
