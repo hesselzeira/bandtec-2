@@ -1,0 +1,11 @@
+Orientação a Objeto 
+P.O.O - Programa Orientada a Objeto | Funcional (funções)
+
+As linguagens são multiparadigmas
+
+Quando vc ve coisas repetidas no seu programa assim criasse objetos 
+
+quando vc começa a reparar padrões
+
+Ela não foi feita para sistemas pequenos.
+
