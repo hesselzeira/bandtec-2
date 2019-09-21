@@ -163,7 +163,7 @@ public class simuladorFinanceiro extends javax.swing.JFrame {
         Integer total = (linhas*valorLinhas) +
                         (estacoes*valorEstacoes) +
                         (totens * valorTotens);
-        
+            
         lbResultado.setText(String.format("O seu plano custará R$ %d", total));
         
     }//GEN-LAST:event_btCalcularActionPerformed
