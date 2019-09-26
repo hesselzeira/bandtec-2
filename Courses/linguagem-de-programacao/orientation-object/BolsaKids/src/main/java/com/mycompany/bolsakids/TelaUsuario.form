@@ -36,14 +36,14 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="tfFrase" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbFrase" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="tfQtfFilhos8a16" pref="59" max="32767" attributes="0"/>
                           <Component id="tfQtFilhos3a7" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfQtFilhos0a2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfQtdFilhos0a2" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -61,7 +61,7 @@
               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfQtFilhos0a2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfQtdFilhos0a2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -78,7 +78,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfFrase" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbFrase" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="73" max="32767" attributes="0"/>
           </Group>
@@ -101,12 +101,12 @@
         <Property name="text" type="java.lang.String" value="Quantos filhos de 8 a 16 voc&#xea; possui?"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfQtFilhos0a2">
+    <Component class="javax.swing.JTextField" name="tfQtdFilhos0a2">
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfQtFilhos0a2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfQtdFilhos0a2ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="tfQtFilhos3a7">
@@ -132,7 +132,7 @@
         <Property name="text" type="java.lang.String" value="Resultado:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="tfFrase">
+    <Component class="javax.swing.JLabel" name="lbFrase">
       <Properties>
         <Property name="text" type="java.lang.String" value="(frase)"/>
       </Properties>

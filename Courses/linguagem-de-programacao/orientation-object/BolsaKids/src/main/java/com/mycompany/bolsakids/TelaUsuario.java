@@ -5,11 +5,15 @@
  */
 package com.mycompany.bolsakids;
 
+import java.awt.Color;
+
 /**
  *
  * @author Aluno
  */
 public class TelaUsuario extends javax.swing.JFrame {
+    
+    BolsaKidsCalculadora calculadora = new BolsaKidsCalculadora();
 
     /**
      * Creates new form TelaUsuario
@@ -30,12 +34,12 @@ public class TelaUsuario extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        tfQtFilhos0a2 = new javax.swing.JTextField();
+        tfQtdFilhos0a2 = new javax.swing.JTextField();
         tfQtFilhos3a7 = new javax.swing.JTextField();
         tfQtfFilhos8a16 = new javax.swing.JTextField();
         btCalcular = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        tfFrase = new javax.swing.JLabel();
+        lbFrase = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,10 +49,10 @@ public class TelaUsuario extends javax.swing.JFrame {
 
         jLabel4.setText("Quantos filhos de 8 a 16 você possui?");
 
-        tfQtFilhos0a2.setText("0");
-        tfQtFilhos0a2.addActionListener(new java.awt.event.ActionListener() {
+        tfQtdFilhos0a2.setText("0");
+        tfQtdFilhos0a2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfQtFilhos0a2ActionPerformed(evt);
+                tfQtdFilhos0a2ActionPerformed(evt);
             }
         });
 
@@ -65,7 +69,7 @@ public class TelaUsuario extends javax.swing.JFrame {
 
         jLabel3.setText("Resultado:");
 
-        tfFrase.setText("(frase)");
+        lbFrase.setText("(frase)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,12 +87,12 @@ public class TelaUsuario extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tfFrase)))
+                                .addComponent(lbFrase)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(tfQtfFilhos8a16, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
                             .addComponent(tfQtFilhos3a7, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tfQtFilhos0a2, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addComponent(tfQtdFilhos0a2, javax.swing.GroupLayout.Alignment.LEADING)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(119, 119, 119)
                         .addComponent(btCalcular)))
@@ -100,7 +104,7 @@ public class TelaUsuario extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(tfQtFilhos0a2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfQtdFilhos0a2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tfQtFilhos3a7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -114,19 +118,29 @@ public class TelaUsuario extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(tfFrase))
+                    .addComponent(lbFrase))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfQtFilhos0a2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQtFilhos0a2ActionPerformed
+    private void tfQtdFilhos0a2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQtdFilhos0a2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfQtFilhos0a2ActionPerformed
+    }//GEN-LAST:event_tfQtdFilhos0a2ActionPerformed
 
     private void btCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCalcularActionPerformed
-        // TODO add your handling code here:
+       
+       Integer qtdFilhos0a2 = Integer.valueOf(tfQtdFilhos0a2.getText());
+       Integer qtdFilhos3a7 = Integer.valueOf(tfQtFilhos3a7.getText());
+       Integer qtdFilhos8a16 = Integer.valueOf(tfQtfFilhos8a16.getText());
+       
+       Double resultado = calculadora.calcular(qtdFilhos0a2, qtdFilhos3a7, qtdFilhos8a16);
+       
+       lbFrase.setText(String.format("Sua bolsa kids será de R$%.2f", resultado));
+       
+       lbFrase.setForeground(Color.blue);
+       
     }//GEN-LAST:event_btCalcularActionPerformed
 
     /**
@@ -170,9 +184,9 @@ public class TelaUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel tfFrase;
-    private javax.swing.JTextField tfQtFilhos0a2;
+    private javax.swing.JLabel lbFrase;
     private javax.swing.JTextField tfQtFilhos3a7;
+    private javax.swing.JTextField tfQtdFilhos0a2;
     private javax.swing.JTextField tfQtfFilhos8a16;
     // End of variables declaration//GEN-END:variables
 }
