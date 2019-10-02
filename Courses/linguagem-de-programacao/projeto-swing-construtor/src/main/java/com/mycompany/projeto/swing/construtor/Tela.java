@@ -27,8 +27,8 @@ public class Tela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btAfro = new javax.swing.JButton();
+        btOriental = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         lbCor = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -38,12 +38,17 @@ public class Tela extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton2.setText("Vai nascer um Afrodescendente");
-
-        jButton3.setText("Vai nascer um Oriental");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btAfro.setText("Vai nascer um Afrodescendente");
+        btAfro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btAfroActionPerformed(evt);
+            }
+        });
+
+        btOriental.setText("Vai nascer um Oriental");
+        btOriental.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btOrientalActionPerformed(evt);
             }
         });
 
@@ -81,17 +86,17 @@ public class Tela extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
                         .addComponent(lbCor))
-                    .addComponent(jButton3)
-                    .addComponent(jButton2))
+                    .addComponent(btOriental)
+                    .addComponent(btAfro))
                 .addContainerGap(172, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addComponent(jButton2)
+                .addComponent(btAfro)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(btOriental)
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -110,9 +115,25 @@ public class Tela extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btOrientalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOrientalActionPerformed
+        PessoaOriental oriental
+                = new PessoaOriental();
+
+        lbCor.setText(oriental.getCor());
+        lbOssos.setText(oriental.getDensidadeOssea());
+        lbPeso.setText(oriental.getPesoMedio().toString());        // TODO add your handling code here:
+    }//GEN-LAST:event_btOrientalActionPerformed
+
+    private void btAfroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAfroActionPerformed
+
+        PessoaAfrodescendente afrodescendente
+                = new PessoaAfrodescendente();
+
+        lbCor.setText(afrodescendente.getCor());
+        lbOssos.setText(afrodescendente.getDensidadeOssea());
+        lbPeso.setText(afrodescendente.getPesoMedio().toString());
+
+    }//GEN-LAST:event_btAfroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,8 +171,8 @@ public class Tela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btAfro;
+    private javax.swing.JButton btOriental;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
