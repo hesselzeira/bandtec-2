@@ -35,6 +35,8 @@ public class Tela extends javax.swing.JFrame {
         lbOssos = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         lbPeso = new javax.swing.JLabel();
+        btSuperHumano = new javax.swing.JButton();
+        btHumanoFraquinho = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +69,20 @@ public class Tela extends javax.swing.JFrame {
         lbPeso.setForeground(new java.awt.Color(23, 2, 12));
         lbPeso.setText("---");
 
+        btSuperHumano.setText("Vai nascer um Super humano");
+        btSuperHumano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSuperHumanoActionPerformed(evt);
+            }
+        });
+
+        btHumanoFraquinho.setText("Vai nascer um Humano Franquinho");
+        btHumanoFraquinho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btHumanoFraquinhoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -75,41 +91,51 @@ public class Tela extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lbPeso))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lbOssos))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
+                        .addGap(27, 27, 27)
                         .addComponent(lbCor))
+                    .addComponent(btSuperHumano)
+                    .addComponent(btHumanoFraquinho)
                     .addComponent(btOriental)
-                    .addComponent(btAfro))
-                .addContainerGap(172, Short.MAX_VALUE))
+                    .addComponent(btAfro)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(lbOssos))
+                            .addComponent(lbPeso))))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(24, 24, 24)
                 .addComponent(btAfro)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btOriental)
+                .addGap(18, 18, 18)
+                .addComponent(btSuperHumano)
+                .addGap(13, 13, 13)
+                .addComponent(btHumanoFraquinho)
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(lbCor))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(lbOssos))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(lbPeso))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbOssos)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbPeso))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         pack();
@@ -134,6 +160,20 @@ public class Tela extends javax.swing.JFrame {
         lbPeso.setText(afrodescendente.getPesoMedio().toString());
 
     }//GEN-LAST:event_btAfroActionPerformed
+
+    private void btSuperHumanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSuperHumanoActionPerformed
+        PessoaTransgenica pessoa = new PessoaTransgenica("automático", "iniquebrável", 4.0);
+        lbCor.setText(pessoa.getCor());
+        lbOssos.setText(pessoa.getDensidadeOssea());
+        lbPeso.setText(pessoa.getPesoMedio().toString());
+    }//GEN-LAST:event_btSuperHumanoActionPerformed
+
+    private void btHumanoFraquinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btHumanoFraquinhoActionPerformed
+        PessoaTransgenica pessoa = new PessoaTransgenica("esquisita", "muito baixa", 1.5);
+        lbCor.setText(pessoa.getCor());
+        lbOssos.setText(pessoa.getDensidadeOssea());
+        lbPeso.setText(pessoa.getPesoMedio().toString());
+    }//GEN-LAST:event_btHumanoFraquinhoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,7 +212,9 @@ public class Tela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAfro;
+    private javax.swing.JButton btHumanoFraquinho;
     private javax.swing.JButton btOriental;
+    private javax.swing.JButton btSuperHumano;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

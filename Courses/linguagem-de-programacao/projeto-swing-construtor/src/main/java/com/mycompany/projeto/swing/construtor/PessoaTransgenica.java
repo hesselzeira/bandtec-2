@@ -5,8 +5,13 @@ public class PessoaTransgenica {
     private String densidadeOssea;
     private Double pesoMedio;
 
-    
+    public PessoaTransgenica(String cor, String densidadeOssea, Double pesoMedio) {
+        this.cor = cor;
+        this.densidadeOssea = densidadeOssea;
+        this.pesoMedio = pesoMedio;
+    }
 
+    
     public String getCor() {
         return cor;
     }
