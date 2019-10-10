@@ -16,3 +16,6 @@ CREATE TABLE `gaga`.`leitura` (
   ('Memória', '82', current_timestamp()),
   ('Memória', '37', current_timestamp());
   
+  select * from gaga.leitura;
+  select * from gaga.leitura;
+  select * from gaga.leitura;
