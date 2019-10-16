@@ -120,10 +120,6 @@ public class telaPolitico extends javax.swing.JFrame {
                         .addComponent(lbEstudandoOCargoDe, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(lbOqueFaz, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(66, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -157,7 +153,11 @@ public class telaPolitico extends javax.swing.JFrame {
                                             .addComponent(jLabel1))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addComponent(btSenador)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addComponent(lbOqueFaz, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(21, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,9 +185,9 @@ public class telaPolitico extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(lbEstudandoOCargoDe))
-                .addGap(27, 27, 27)
+                .addGap(33, 33, 33)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btTempoDeGov)
                     .addComponent(btOQueFaz)
@@ -229,8 +229,7 @@ public class telaPolitico extends javax.swing.JFrame {
 
     private void btSalarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalarioActionPerformed
        lbSalario.setText(polytico.getSalario().toString());
-        
-    
+      
     }//GEN-LAST:event_btSalarioActionPerformed
 
     private void btOQueFazActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOQueFazActionPerformed
@@ -238,7 +237,7 @@ public class telaPolitico extends javax.swing.JFrame {
     }//GEN-LAST:event_btOQueFazActionPerformed
 
     private void btTempoDeGovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btTempoDeGovActionPerformed
-        // TODO add your handling code here:
+        lbTempoDeGov.setText(polytico.getTempoDeGov().toString());
     }//GEN-LAST:event_btTempoDeGovActionPerformed
 
     private void btPrefeitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPrefeitoActionPerformed
