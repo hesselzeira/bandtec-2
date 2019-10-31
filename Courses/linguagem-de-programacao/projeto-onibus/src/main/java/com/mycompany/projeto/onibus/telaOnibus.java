@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package com.mycompany.projeto.onibus;
 
-/**
- *
- * @author Aluno
- */
+
 public class telaOnibus extends javax.swing.JFrame {
 
-    /**
-     * Creates new form telaOnibus
-     */
+    Onibus busao = new Onibus();
+    
     public telaOnibus() {
         initComponents();
     }
@@ -30,14 +22,17 @@ public class telaOnibus extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         tfLimite = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        tfEntrada = new javax.swing.JTextField();
         btEntrar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         tfSaida = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btSair = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         lbPassageiros = new javax.swing.JLabel();
         lbUltimaAcao = new javax.swing.JLabel();
+        btRegistrarLimite = new javax.swing.JButton();
+        btEntrar1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,10 +49,10 @@ public class telaOnibus extends javax.swing.JFrame {
 
         jLabel3.setText("Quantos passageiros vão entrar? ");
 
-        jTextField1.setText("----- ");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tfEntrada.setText("----- ");
+        tfEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tfEntradaActionPerformed(evt);
             }
         });
 
@@ -77,10 +72,10 @@ public class telaOnibus extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Sair");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btSair.setText("Sair");
+        btSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btSairActionPerformed(evt);
             }
         });
 
@@ -90,18 +85,35 @@ public class telaOnibus extends javax.swing.JFrame {
 
         lbUltimaAcao.setText("-----");
 
+        btRegistrarLimite.setText("Registar limite");
+        btRegistrarLimite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btRegistrarLimiteActionPerformed(evt);
+            }
+        });
+
+        btEntrar1.setText("Entrar SEM separar");
+        btEntrar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEntrar1ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Deixar 1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btRegistrarLimite)
                     .addComponent(lbUltimaAcao)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(36, 36, 36)
-                        .addComponent(tfLimite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tfLimite))
                     .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,14 +122,18 @@ public class telaOnibus extends javax.swing.JFrame {
                             .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
-                            .addComponent(tfSaida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbPassageiros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lbPassageiros, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfEntrada, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                            .addComponent(tfSaida))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(btSair)
                             .addComponent(btEntrar))))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btEntrar1)
+                    .addComponent(jButton1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,23 +144,27 @@ public class telaOnibus extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(tfLimite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btRegistrarLimite)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btEntrar))
+                    .addComponent(tfEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btEntrar)
+                    .addComponent(btEntrar1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(tfSaida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btSair)
                     .addComponent(jButton1))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(lbPassageiros))
-                .addGap(35, 35, 35)
+                .addGap(38, 38, 38)
                 .addComponent(lbUltimaAcao)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();
@@ -154,25 +174,47 @@ public class telaOnibus extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfLimiteActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tfEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEntradaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tfEntradaActionPerformed
 
     private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
-        // TODO add your handling code here:
+        busao.receber(
+                Integer.valueOf(tfEntrada.getText()));
+        
+        lbPassageiros.setText(
+                busao.getPassageiros().toString());
+                lbUltimaAcao.setText(busao.getUltimaAcao());
+                
     }//GEN-LAST:event_btEntrarActionPerformed
 
     private void tfSaidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSaidaActionPerformed
-        // TODO add your handling code here:
+         
     }//GEN-LAST:event_tfSaidaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairActionPerformed
+       busao.sair(
+                Integer.valueOf(tfSaida.getText()));
+        
+        lbPassageiros.setText(
+                busao.getPassageiros().toString());
+                lbUltimaAcao.setText(busao.getUltimaAcao());
+    }//GEN-LAST:event_btSairActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btRegistrarLimiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRegistrarLimiteActionPerformed
+        busao.setLimite(Integer.valueOf(tfLimite.getText()));
+    }//GEN-LAST:event_btRegistrarLimiteActionPerformed
+
+    private void btEntrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrar1ActionPerformed
+        busao.receber(
+                Integer.valueOf(tfEntrada.getText()),false);
+        
+        lbPassageiros.setText(
+                busao.getPassageiros().toString());
+                lbUltimaAcao.setText(busao.getUltimaAcao());
+    }//GEN-LAST:event_btEntrar1ActionPerformed
+
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -207,15 +249,18 @@ public class telaOnibus extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEntrar;
+    private javax.swing.JButton btEntrar1;
+    private javax.swing.JButton btRegistrarLimite;
+    private javax.swing.JButton btSair;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbPassageiros;
     private javax.swing.JLabel lbUltimaAcao;
+    private javax.swing.JTextField tfEntrada;
     private javax.swing.JTextField tfLimite;
     private javax.swing.JTextField tfSaida;
     // End of variables declaration//GEN-END:variables
