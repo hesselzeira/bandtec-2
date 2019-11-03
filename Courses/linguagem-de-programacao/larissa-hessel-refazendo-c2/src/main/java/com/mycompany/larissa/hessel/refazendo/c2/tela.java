@@ -69,8 +69,18 @@ public class tela extends javax.swing.JFrame {
         });
 
         btOqueFaz.setText("O que faz");
+        btOqueFaz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btOqueFazActionPerformed(evt);
+            }
+        });
 
         btSalario.setText("Salário");
+        btSalario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSalarioActionPerformed(evt);
+            }
+        });
 
         btTempodeGoverno.setText("Tempo de governo");
         btTempodeGoverno.addActionListener(new java.awt.event.ActionListener() {
@@ -140,8 +150,8 @@ public class tela extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
-                        .addComponent(lbTempoGoverno, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbTempoGoverno)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -164,11 +174,10 @@ public class tela extends javax.swing.JFrame {
                     .addComponent(btSalario)
                     .addComponent(btOqueFaz))
                 .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel7)
-                        .addComponent(lbTempoGoverno)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(lbTempoGoverno)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -184,7 +193,7 @@ public class tela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btTempodeGovernoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btTempodeGovernoActionPerformed
-        // TODO add your handling code here:
+         lbTempoGoverno.setText(poly.getTempoDeGoverno().toString());
     }//GEN-LAST:event_btTempodeGovernoActionPerformed
 
     private void btPresidenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPresidenteActionPerformed
@@ -202,6 +211,14 @@ public class tela extends javax.swing.JFrame {
        poly = new Prefeito();
        lbOqueEscolheuParaEstudar.setText(poly.getoQueEstaEstudando());
     }//GEN-LAST:event_btPrefeitoActionPerformed
+
+    private void btSalarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalarioActionPerformed
+         lbSalario.setText(poly.getSalario().toString());
+    }//GEN-LAST:event_btSalarioActionPerformed
+
+    private void btOqueFazActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOqueFazActionPerformed
+         lbOqueFaz.setText(poly.getoQueFaz());
+    }//GEN-LAST:event_btOqueFazActionPerformed
 
     /**
      * @param args the command line arguments
