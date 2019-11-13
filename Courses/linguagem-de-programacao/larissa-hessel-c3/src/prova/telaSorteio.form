@@ -93,16 +93,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Sorteio da Mega Sena"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btMegaSenaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btLotofacil">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sorteio da Loto f&#xe1;cil"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btLotofacilActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btQuina">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sorteio da Quina"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btQuinaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>

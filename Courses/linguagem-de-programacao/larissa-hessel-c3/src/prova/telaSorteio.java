@@ -2,9 +2,8 @@ package prova;
 
 public class telaSorteio extends javax.swing.JFrame {
 
-    /**
-     * Creates new form telaSorteio
-     */
+    Jogo joguinho;
+    
     public telaSorteio() {
         initComponents();
     }
@@ -33,10 +32,25 @@ public class telaSorteio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btMegaSena.setText("Sorteio da Mega Sena");
+        btMegaSena.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMegaSenaActionPerformed(evt);
+            }
+        });
 
         btLotofacil.setText("Sorteio da Loto fácil");
+        btLotofacil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLotofacilActionPerformed(evt);
+            }
+        });
 
         btQuina.setText("Sorteio da Quina");
+        btQuina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQuinaActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Números sorteados:");
 
@@ -112,6 +126,28 @@ public class telaSorteio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btMegaSenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMegaSenaActionPerformed
+         
+        joguinho = new MegaSena();
+         
+         lbNumeroSorteado.setText(joguinho.getSorteados());
+         lbValorGanho.setText(joguinho.getSorteados());
+    }//GEN-LAST:event_btMegaSenaActionPerformed
+
+    private void btLotofacilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLotofacilActionPerformed
+        
+        joguinho = new LotoFacil();
+         
+         lbNumeroSorteado.setText(joguinho.getSorteados());
+    }//GEN-LAST:event_btLotofacilActionPerformed
+
+    private void btQuinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQuinaActionPerformed
+        
+        joguinho = new Quina ();
+         
+         lbNumeroSorteado.setText(joguinho.getSorteados());
+    }//GEN-LAST:event_btQuinaActionPerformed
 
     /**
      * @param args the command line arguments

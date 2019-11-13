@@ -21,7 +21,7 @@ public abstract class Jogo {
             System.out.println(i + " - " + numerosSorteados.get(i));
         }
         
-        return "ae";
+        return "numerosSorteados";
     }
     
 }
