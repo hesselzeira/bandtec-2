@@ -8,8 +8,8 @@ public class Quina extends Jogo {
     }
 
     public Quina() {
-        Double valorPremio = 10_000.00;
-        Integer quantidadeNumeros = 5;
+        this.valorPremio = 10_000.00;
+        this.quantidadeNumeros = 5;
     }
 
     

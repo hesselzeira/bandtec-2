@@ -11,9 +11,6 @@ public class TelaPassaros extends javax.swing.JFrame {
 
     Passaro passarinho;
     
-    /**
-     * Creates new form TelaPassaros
-     */
     public TelaPassaros() {
         initComponents();
     }

@@ -8,8 +8,8 @@ public class LotoFacil extends Jogo {
     }
 
     public LotoFacil() {
-         Double valorPremio = 5_000.00;
-        Integer quantidadeNumeros = 15;
+        this.valorPremio = 5_000.00;
+        this.quantidadeNumeros = 15;
     }
     
     

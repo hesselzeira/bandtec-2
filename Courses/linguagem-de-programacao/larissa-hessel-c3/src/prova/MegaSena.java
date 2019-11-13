@@ -8,9 +8,15 @@ public class MegaSena extends Jogo {
     }
 
     public MegaSena() {
-        Double valorPremio = 1_000_000.00;
-        Integer quantidadeNumeros = 6;
+        this.valorPremio = 1_000_000.00;
+        this.quantidadeNumeros = 6;
     }
+
+    
+    }
+
     
     
-}
+    
+    
+
